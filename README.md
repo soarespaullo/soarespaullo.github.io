@@ -3,8 +3,11 @@
 **Paulo Soares - Defesa Cibernética.**
 
 - 🌱 Apaixonado por Tecnologia,
-- 💻 Estudando de Segurançã da Informação,
-- 🎓 Cursando Defesa Cibernética, 
+- 💻 Estudante de Segurançã da Informação,
+- 🎓 Formado em Segurançã da Informação
+- 🎓 Cursando Computação Forense e Perícia Digital,
+- 🎓 Pós-Graduado em Defesa Cibernética,
+- 🥁 Músico,
 - 🕹 Gamer, 
 - 🧔🏽 Pai, 
 
