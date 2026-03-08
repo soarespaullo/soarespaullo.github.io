@@ -4,9 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta name="description" content="Portfólio de Paulo Soares - SysAdmin, Defesa Cibernética e Perícia Forense Digital.">
+    <meta name="author" content="Paulo Soares">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soarespaullo.github.io/">
+    <meta property="og:title" content="Paulo_Soares | Security Professional">
+    <meta property="og:description" content="Explorando vulnerabilidades e fortalecendo defesas. Especialista em SysAdmin e Forense Digital.">
+    <meta property="og:image" content="https://soarespaullo.github.io/assets/img/og-image.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://soarespaullo.github.io/">
+    <meta property="twitter:title" content="Paulo_Soares | Security Professional">
+    <meta property="twitter:description" content="Explorando vulnerabilidades e fortalecendo defesas.">
+    <meta property="twitter:image" content="https://soarespaullo.github.io/assets/img/og-image.jpg">
+
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    
     <title>Paulo Soares</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -17,7 +35,7 @@
     <div class="container">
         <header>
             <div class="profile-container">
-                <div class="profile-flip">
+                <div class="profile-flip" onclick="this.classList.toggle('flipped')">
                     <div class="profile-inner">
                         <img src="assets/img/profile.jpg" alt="Paulo Soares" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Paulo+Soares&background=161616&color=00ff41'">
                         
@@ -29,8 +47,7 @@
 
                 <div class="header-text">
                     <h1>Paulo_Soares<span class="cursor"></span></h1>
-                    <!-- <p class="mono" style="font-size: 0.9rem; margin-top: 5px;">> SysAdmin | Defesa Cibernética | Forense Digital</p> -->
-		    <p id="typing" class="mono" style="font-size: 0.9rem; margin-top: 5px; min-height: 1.5em;"></p>
+                    <p id="typing" class="mono" style="font-size: 0.9rem; margin-top: 5px; min-height: 1.5em;"></p>
 
                     <div class="social-links">
                         <a href="https://linkedin.com/in/soarespaullo/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -181,8 +198,12 @@
             <div id="more-certs" class="extra-certs">
                 <ul>
                     <li>Beginners Developer — <span class="mono">4Linux</span></li>
-                    <li>Analista de Suporte — <span class="mono">Instituição Exemplo</span></li>
-                    <li>Configuração de Redes — <span class="mono">Instituição Exemplo</span></li>
+                    <li>Metasploit Framework — <span class="mono">Hackers Hive / Daniel Donda</span></li>
+                    <li>Formação em Cibersegurança — <span class="mono">Hackers do Bem / Osvaldo Luiz</span></li>
+                    <li>Servidor Samba 4 Active Directory — <span class="mono">Udemy / Edson Oliveira</span></li>
+                    <li>Arquitetura de Redes — <span class="mono">Udemy / Gabriel Torres</span></li>
+                    <li>Workshop Hotspot — <span class="mono">Redes Brasil / Francisco Neto</span></li>
+                    <li>FortiGate do Zero — <span class="mono">Redes Brasil / Lucas Roberto</span></li>
                 </ul>
             </div>
 
