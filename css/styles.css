@@ -74,8 +74,14 @@ header {
     transform-style: preserve-3d;
 }
 
-/* Gatilhos do Giro (Hover e Clique Mobile) */
-.profile-flip:hover .profile-inner,
+/* Gatilho 1: Desktop (Hover) */
+@media (hover: hover) {
+    .profile-flip:hover .profile-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Gatilho 2: Mobile/JS (Classe controlada pelo script.js) */
 .profile-flip.flipped .profile-inner {
     transform: rotateY(180deg);
 }
@@ -84,8 +90,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     border-radius: 50%;
     border: 2px solid var(--border);
@@ -166,14 +172,14 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+h2[title] {
+    cursor: help;
+}
+
 h2::before {
     content: "➜";
     margin-right: 10px;
     font-size: 0.9rem;
-}
-
-h2[title] {
-    cursor: help;
 }
 
 /* --- ITENS DE EXPERIÊNCIA E FORMAÇÃO --- */
@@ -248,34 +254,88 @@ ul li::before {
     font-family: 'JetBrains Mono', monospace;
 }
 
-/* --- SKILLS GRID --- */
-.skills-grid {
+/* --- GRID DE SKILLS E PROJETOS --- */
+/* Layout unificado para os grids de cartões */
+.skills-grid, .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.skill-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 0.6rem;
-    text-align: center;
-    border-radius: 4px;
-    transition: 0.3s;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+/* Estilo dos cartões de Skill e Projetos */
+.skill-card, .project-card {
+    background: rgba(20, 20, 20, 0.4);
+    border: 1px dashed #333; /* Estilo 'draft/system' */
+    padding: 15px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 45px;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    border-radius: 4px;
 }
 
-.skill-tag:hover {
-    border-color: var(--accent-green);
-    background: rgba(0, 255, 65, 0.05);
-    transform: scale(1.02);
+.skill-card {
+    flex-direction: row; /* Skills mantêm ícone ao lado */
+    align-items: flex-start;
+}
+
+.skill-card:hover, .project-card:hover {
+    border: 1px solid var(--accent-green);
+    background: rgba(0, 255, 65, 0.03);
+    box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.05);
+}
+
+.skill-icon {
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 3px;
+    opacity: 0.8;
+}
+
+.skill-name {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    color: var(--accent-green);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-desc {
+    display: block;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA PROJETOS --- */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.project-header h3 {
+    font-size: 1.1rem;
+}
+
+.project-header a {
+    color: #888;
+    transition: 0.3s;
+}
+
+.project-header a:hover {
+    color: var(--accent-green);
+}
+
+.project-card p {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.5;
 }
 
 /* --- CERTIFICAÇÕES E EXPANSÃO --- */
@@ -336,7 +396,7 @@ footer {
         font-size: 1.8rem;
     }
 
-    .skills-grid {
+    .skills-grid, .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
 }
