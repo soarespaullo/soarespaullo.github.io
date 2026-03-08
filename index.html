@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,16 +11,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <div class="container">
         <header>
             <div class="profile-container">
-                <img src="assets/img/profile.jpg" alt="Paulo Soares" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Paulo+Soares&background=161616&color=00ff41'">
+                <div class="profile-flip">
+                    <div class="profile-inner">
+                        <img src="assets/img/profile.jpg" alt="Paulo Soares" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Paulo+Soares&background=161616&color=00ff41'">
+                        
+                        <div class="profile-back">
+                            <i class="fas fa-question"></i>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="header-text">
                     <h1>Paulo_Soares<span class="cursor"></span></h1>
-                    <p class="mono" style="font-size: 0.9rem; margin-top: 5px;">> SysAdmin | Defesa Cibernética | Forense Digital</p>
-                    
+                    <!-- <p class="mono" style="font-size: 0.9rem; margin-top: 5px;">> SysAdmin | Defesa Cibernética | Forense Digital</p> -->
+		    <p id="typing" class="mono" style="font-size: 0.9rem; margin-top: 5px; min-height: 1.5em;"></p>
+
                     <div class="social-links">
                         <a href="https://linkedin.com/in/soarespaullo/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.youtube.com/@soarespaullo" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -34,19 +46,20 @@
         </header>
 
         <section id="sobre">
-	    <h2 title="Comando usado para identificar o usuário logado no sistema">whoami</h2>
+            <h2 title="Comando usado para identificar o usuário logado no sistema">whoami</h2>
             <p>
-            Sou graduado em Segurança da Informação e pós-graduando em <span class="highlight-bold">Defesa Cibernética</span> e <span class="highlight-bold">Perícia Forense Computacional</span>. Com mais de <span class="highlight-bold">dois anos de experiência</span> na administração de sistemas, atuo diretamente na configuração e manutenção de redes, servidores e infraestrutura de TI. Minhas competências unem o suporte técnico avançado à implementação de práticas de defesa cibernética e <span class="highlight-bold">investigação forense</span>. Tenho foco em garantir a <span class="highlight-bold">resiliência de ambientes computacionais</span>, mitigando ameaças e aplicando políticas de segurança que protegem a integridade e a continuidade dos dados.
+                Sou graduado em Segurança da Informação e pós-graduando em <span class="highlight-bold">Defesa Cibernética</span> e <span class="highlight-bold">Perícia Forense Computacional</span>. Com mais de <span class="highlight-bold">dois anos de experiência</span> na administração de sistemas, atuo diretamente na configuração e manutenção de redes, servidores e infraestrutura de TI. Minhas competências unem o suporte técnico avançado à implementação de práticas de defesa cibernética e <span class="highlight-bold">investigação forense</span>. Tenho foco em garantir a <span class="highlight-bold">resiliência de ambientes computacionais</span>, mitigando ameaças e aplicando políticas de segurança que protegem a integridade e a continuidade dos dados.
             </p>
         </section>
 
         <section id="objetivos">
-	    <h2 title="Exibe o conteúdo do arquivo de metas e objetivos profissionais">cat /etc/goals</h2>
+            <h2 title="Exibe o conteúdo do arquivo de metas e objetivos profissionais">cat /etc/goals</h2>
             <p>Meu objetivo é me consolidar como especialista em Segurança da Informação, com foco em ambientes <span class="highlight-bold">Linux</span>, infraestrutura corporativa e resposta a incidentes. Tenho grande interesse em atuar com segurança ofensiva, automação com <span class="highlight-bold">Python</span>, hardening de servidores e análise forense digital. Busco constantemente aprimorar minhas habilidades em detecção e mitigação de ameaças, análise de vulnerabilidades e implementação de políticas de segurança.</p>
         </section>
 
         <section id="experiencia">
             <h2 title="Lista o histórico de comandos executados filtrando por experiências de trabalho">history | grep "work"</h2>
+
             <div class="item">
                 <div class="item-header">
                     <h3>Auxiliar de CPD | TI</h3>
@@ -84,6 +97,7 @@
                 </div>
                 <span class="category-badge">SysAdmin</span>
                 <ul>
+                    <li>Prestação de suporte técnico avançado via acesso remoto seguro (SSH, RDP, VPN);</li>
                     <li>Rever a infraestrutura de rede, logs de servidor e aplicativos;</li>
                     <li>Patch de sistemas operacionais e software de terceiros;</li>
                     <li>Monitoramento de softwares e antivírus;</li>
@@ -111,13 +125,22 @@
         <section id="formacao">
             <h2 title="Exibe o arquivo de configuração do sistema que contém os dados educacionais">cat /etc/education</h2>
             <div class="item">
-                <div class="item-header"><h3>Pós: Forense Computacional e Perícia Digital</h3><span class="date">2025</span></div>
+                <div class="item-header">
+                    <h3>Pós: Forense Computacional e Perícia Digital</h3>
+                    <span class="date">2025</span>
+                </div>
                 <span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
-                
-                <div class="item-header"><h3>Pós: Defesa Cibernética</h3><span class="date">2025</span></div>
-		<span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
-                
-                <div class="item-header"><h3>Graduação: Segurança da Informação</h3><span class="date">2024</span></div>
+
+                <div class="item-header">
+                    <h3>Pós: Defesa Cibernética</h3>
+                    <span class="date">2025</span>
+                </div>
+                <span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
+
+                <div class="item-header">
+                    <h3>Graduação: Segurança da Informação</h3>
+                    <span class="date">2024</span>
+                </div>
                 <span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
             </div>
         </section>
@@ -125,27 +148,45 @@
         <section id="skills">
             <h2 title="Lista os binários (ferramentas e habilidades) disponíveis no sistema">ls /bin/skills</h2>
             <div class="skills-grid">
-                <div class="skill-tag">Linux_Hardening</div>
-                <div class="skill-tag">Windows_Server</div>
-                <div class="skill-tag">Servidores_Linux</div>
+                <div class="skill-tag">Linux/Hardening</div>
+                <div class="skill-tag">Windows/Server</div>
+                <div class="skill-tag">Servidores/Linux</div>
                 <div class="skill-tag">Mikrotik</div>
-                <div class="skill-tag">Digital_Forensics</div>
+                <div class="skill-tag">MySQL</div>
                 <div class="skill-tag">Pentesting</div>
-                <div class="skill-tag">Python_Security</div>
-                <div class="skill-tag">Incident_Response</div>
+                <div class="skill-tag">KVM/QEMU</div>
+                <div class="skill-tag">VMware/VirtualBox</div>
+                <div class="skill-tag">WordPress/CMS</div>
+                <div class="skill-tag">DDoS/Brute Force</div>
+                <div class="skill-tag">SSH/RDP/VPN</div>
+                <div class="skill-tag">Troubleshooting_Remoto</div>
             </div>
         </section>
 
         <section id="certificacoes">
             <h2 title="Busca por registros de certificados dentro do log de conquistas">grep "CERT" achievements.log</h2>
             <ul>
-                <li>Pentest Profissional — <span class="mono">Desec Security</span></li>
+                <li>Pentest Profissional — <span class="mono">Desec Security / Ricardo Longatto</span></li>
                 <li>Hacking e Pentest — <span class="mono">Solyd Offensive Security</span></li>
-                <li>WiFi Hacking Enterprise — <span class="mono">Desec Security</span></li>
+                <li>Wi-Fi Hacking Enterprise — <span class="mono">Desec Security / Mateus Buogo</span></li>
+                <li>Pentest Mobile — <span class="mono">Desec Security / Ricardo Longatto</span></li>
                 <li>Treinamento MikroTik — <span class="mono">Redes Brasil / Francisco Neto</span></li>
-                <li>Beginners Developer — <span class="mono">4Linux</span></li>
+                <li>Pro. em Shell Script — <span class="mono">SlackJeff / Jefferson Carneiro</span></li>
+                <li>Curso de Firewall — <span class="mono">Redes Brasil / Francisco Neto</span></li>
+                <li>Curso Zabbix do Zero — <span class="mono">Redes Brasil / Thales Moisés</span></li>
+                <li>Ind. a Segurança da Informação — <span class="mono">eSecurity / Alan Sanches</span></li>
                 <li>Ataques DoS/DDoS — <span class="mono">Udemy</span></li>
             </ul>
+
+            <div id="more-certs" class="extra-certs">
+                <ul>
+                    <li>Beginners Developer — <span class="mono">4Linux</span></li>
+                    <li>Analista de Suporte — <span class="mono">Instituição Exemplo</span></li>
+                    <li>Configuração de Redes — <span class="mono">Instituição Exemplo</span></li>
+                </ul>
+            </div>
+
+            <button class="btn-more" id="toggle-btn" onclick="toggleCerts()">[ tail -f achievements.log ]</button>
         </section>
 
         <footer>
@@ -157,4 +198,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
