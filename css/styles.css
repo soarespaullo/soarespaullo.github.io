@@ -1,3 +1,4 @@
+/* --- VARIÁVEIS DO SISTEMA --- */
 :root {
     --bg-black: #0d0d0d;
     --surface: #161616;
@@ -7,8 +8,12 @@
     --border: #262626;
 }
 
-/* Reset e Base */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* --- RESET E CONFIGURAÇÕES BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--bg-black);
@@ -21,12 +26,23 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-.mono { font-family: 'JetBrains Mono', monospace; color: var(--accent-green); }
-.highlight-bold { color: var(--accent-green); font-weight: 700; }
+/* --- CLASSES UTILITÁRIAS --- */
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-green);
+}
 
-/* --- HEADER --- */
+.highlight-bold {
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+/* --- HEADER E EFEITO FLIP DA FOTO (CORRIGIDO) --- */
 header {
     margin-bottom: 3rem;
 }
@@ -39,23 +55,58 @@ header {
     padding-bottom: 2rem;
 }
 
-.profile-pic {
+/* Container do Flip - Reserva o espaço físico no layout */
+.profile-flip {
+    position: relative;
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Foto Circular */
-    border: 2px solid var(--border);
-    filter: grayscale(100%);
-    transition: 0.4s;
-    object-fit: cover;
-    flex-shrink: 0;
+    perspective: 1000px;
+    flex-shrink: 0; /* Impede que o texto "atropele" a imagem */
 }
 
-.profile-pic:hover {
-    filter: grayscale(0%);
+.profile-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.profile-flip:hover .profile-inner {
+    transform: rotateY(180deg);
+}
+
+/* Faces da Foto - Alinhadas absolutamente dentro do container fixo */
+.profile-pic, .profile-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+}
+
+.profile-pic {
+    filter: grayscale(100%);
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.profile-back {
+    background-color: var(--surface);
+    color: var(--accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transform: rotateY(180deg);
     border-color: var(--accent-green);
     box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
 }
 
+/* Texto do Header */
 .header-text h1 {
     margin: 0;
     font-family: 'JetBrains Mono', monospace;
@@ -64,12 +115,42 @@ header {
     font-weight: 800;
 }
 
-.social-links { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
-.social-links a { font-size: 1.3rem; color: var(--text-secondary); transition: 0.3s; }
-.social-links a:hover { color: var(--accent-green); transform: translateY(-3px); }
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2rem;
+    background: var(--accent-green);
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
 
-/* --- SEÇÕES --- */
-section { margin-bottom: 50px; }
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-green);
+    transform: translateY(-3px);
+}
+
+/* --- SEÇÕES E TÍTULOS --- */
+section {
+    margin-bottom: 50px;
+}
 
 h2 {
     font-family: 'JetBrains Mono', monospace;
@@ -82,8 +163,17 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-h2::before { content: "➜"; margin-right: 10px; font-size: 0.9rem; }
+h2::before {
+    content: "➜";
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
 
+h2[title] {
+    cursor: help;
+}
+
+/* --- ITENS DE EXPERIÊNCIA E FORMAÇÃO --- */
 .item {
     position: relative;
     padding-left: 20px;
@@ -91,8 +181,18 @@ h2::before { content: "➜"; margin-right: 10px; font-size: 0.9rem; }
     margin-bottom: 35px;
 }
 
-.item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-.item-header h3 { margin: 0; font-size: 1.15rem; font-weight: 600; }
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.item-header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
 
 .date {
     font-family: 'JetBrains Mono', monospace;
@@ -122,9 +222,21 @@ h2::before { content: "➜"; margin-right: 10px; font-size: 0.9rem; }
     margin-bottom: 15px;
 }
 
-/* --- LISTAS [+] --- */
-ul { list-style: none; padding-left: 0; margin-top: 10px; color: var(--text-secondary); }
-ul li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 0.95rem; }
+/* --- LISTAS ESTILO TERMINAL --- */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    color: var(--text-secondary);
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
 ul li::before {
     content: "[+]";
     position: absolute;
@@ -133,8 +245,13 @@ ul li::before {
     font-family: 'JetBrains Mono', monospace;
 }
 
-/* --- SKILLS --- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.8rem; }
+/* --- SKILLS GRID --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.8rem;
+}
+
 .skill-tag {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
@@ -144,8 +261,43 @@ ul li::before {
     text-align: center;
     border-radius: 4px;
     transition: 0.3s;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
 }
-.skill-tag:hover { border-color: var(--accent-green); background: rgba(0, 255, 65, 0.05); }
+
+.skill-tag:hover {
+    border-color: var(--accent-green);
+    background: rgba(0, 255, 65, 0.05);
+    transform: scale(1.02);
+}
+
+/* --- CERTIFICAÇÕES E EXPANSÃO --- */
+.extra-certs {
+    display: none;
+}
+
+.btn-more {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    font-family: 'JetBrains Mono', monospace;
+    padding: 8px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.btn-more:hover {
+    background: rgba(0, 255, 65, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
 
 /* --- FOOTER --- */
 footer {
@@ -158,17 +310,30 @@ footer {
     color: var(--text-secondary);
 }
 
-.cursor { display: inline-block; width: 8px; height: 1.2rem; background: var(--accent-green); margin-left: 5px; animation: blink 1s infinite; vertical-align: middle; }
-@keyframes blink { 50% { opacity: 0; } }
-
 /* --- MOBILE RESPONSIVO --- */
 @media (max-width: 600px) {
-    .profile-container { flex-direction: column; text-align: center; gap: 1rem; }
-    .item-header { flex-direction: column; gap: 0.5rem; }
-    .social-links { justify-content: center; }
-    h1 { font-size: 1.8rem; }
-}
+    body { padding: 1rem; }
 
-h2[title] {
-    cursor: help; /* Muda o mouse para uma interrogação quando passa sobre o título */
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .item-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
 }
