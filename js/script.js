@@ -1,5 +1,5 @@
 /* Paulo Soares - Terminal Script
-    Finalidade: Estética, Interatividade e Efeito Typewriter
+    Finalidade: Estética, Interatividade, Typewriter e Giro Automático
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,13 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("%c[!] SYSTEM CHECK: INTEGRITY VERIFIED", "color: #00ff41; font-weight: bold; font-size: 16px; background: #0d0d0d; padding: 5px;");
     console.log("%cUsuário: soarespaullo@zer0-day\nStatus: Pronto para novos desafios.", "color: #94a3b8; font-family: monospace;");
 
-    // 2. Efeito Typewriter
-    const meuSubtitulo = "> SysAdmin | Defesa Cibernética | Forense Digital";
+    // 2. Iniciar Efeito Typewriter
+    const meuSubtitulo = ">_ SysAdmin | Defesa Cibernética | Forense Digital";
     typeWriter(meuSubtitulo, "typing", 70);
+
+    // 3. Lógica da Foto de Perfil (Giro com retorno automático)
+    const profileFlip = document.querySelector('.profile-flip');
+    if (profileFlip) {
+        profileFlip.addEventListener('click', function() {
+            // Se já estiver virada, ignora o clique para não resetar o timer no meio
+            if (this.classList.contains('flipped')) return;
+
+            // Adiciona a classe que faz girar
+            this.classList.add('flipped');
+
+            // Retorna ao normal automaticamente após 2500ms (2.5 segundos)
+            setTimeout(() => {
+                this.classList.remove('flipped');
+            }, 2500);
+        });
+    }
 });
 
 /**
- * Função Typewriter
+ * Função Typewriter (Efeito Máquina de Escrever)
  */
 function typeWriter(texto, elementoId, velocidade) {
     let i = 0;
@@ -32,6 +49,7 @@ function typeWriter(texto, elementoId, velocidade) {
 
 /**
  * Gerenciamento da Seção de Certificados (achievements.log)
+ * Alterna a visibilidade dos certificados extras
  */
 function toggleCerts() {
     const extra = document.getElementById('more-certs');
