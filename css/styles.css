@@ -42,7 +42,7 @@ body {
     font-weight: 700;
 }
 
-/* --- HEADER E EFEITO FLIP DA FOTO (CORRIGIDO) --- */
+/* --- HEADER E PERFIL --- */
 header {
     margin-bottom: 3rem;
 }
@@ -55,13 +55,15 @@ header {
     padding-bottom: 2rem;
 }
 
-/* Container do Flip - Reserva o espaço físico no layout */
+/* --- EFEITO FLIP DA FOTO --- */
 .profile-flip {
     position: relative;
     width: 120px;
     height: 120px;
     perspective: 1000px;
-    flex-shrink: 0; /* Impede que o texto "atropele" a imagem */
+    flex-shrink: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .profile-inner {
@@ -72,11 +74,12 @@ header {
     transform-style: preserve-3d;
 }
 
-.profile-flip:hover .profile-inner {
+/* Gatilhos do Giro (Hover e Clique Mobile) */
+.profile-flip:hover .profile-inner,
+.profile-flip.flipped .profile-inner {
     transform: rotateY(180deg);
 }
 
-/* Faces da Foto - Alinhadas absolutamente dentro do container fixo */
 .profile-pic, .profile-back {
     position: absolute;
     top: 0;
@@ -106,7 +109,7 @@ header {
     box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
 }
 
-/* Texto do Header */
+/* --- TEXTO E LINKS DO HEADER --- */
 .header-text h1 {
     margin: 0;
     font-family: 'JetBrains Mono', monospace;
