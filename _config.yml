@@ -1,0 +1,232 @@
+# ==========================================================================
+# PERFIL E SEO
+# --------------------------------------------------------------------------
+nome: "Paulo Soares"
+username: "Paulo_Soares"
+cargo_principal: "SysAdmin & Infraestrutura"
+bio_mini: "Portfólio de Paulo Soares - Especialista em Infraestrutura, SysAdmin e pós-graduando em Defesa Cibernética."
+og_description: "Administração de Sistemas, Infraestrutura e Redes. Pós-graduado em Defesa Cibernética e Forense Digital."
+avatar: "assets/img/profile.jpg"
+favicon: "assets/img/favicon.png"
+og_image: "https://soarespaullo.github.io/assets/img/og-image.jpg"
+url_site: "https://soarespaullo.github.io/"
+footer_extra: "Integridade e Confidencialidade."
+
+# ==========================================================================
+# REDES SOCIAIS E LINKS
+# --------------------------------------------------------------------------
+social:
+  linkedin: "https://linkedin.com/in/soarespaullo/"
+  youtube: "https://www.youtube.com/@soarespaullo"
+  github: "https://github.com/soarespaullo/"
+  email: "soarespaullo@proton.me"
+  telegram: "https://t.me/soarespaullo"
+  blog: "https://soarespaullo.github.io/blog/"
+  cv_pdf: "assets/pdf/Paulo.Soares.pdf"
+
+# ==========================================================================
+# SEÇÃO: WHOAMI (Sobre)
+# --------------------------------------------------------------------------
+sobre_texto: >
+  Sou graduado em Segurança da Informação e pós-graduado em <span class="highlight-bold">Defesa Cibernética</span> e <span class="highlight-bold">Perícia Forense Computacional</span>. 
+  Com mais de <span class="highlight-bold">cinco anos de experiência</span> na administração de sistemas, atuo diretamente na configuração e manutenção de redes, servidores e infraestrutura de TI. 
+  Minhas competências unem o suporte técnico avançado à implementação de práticas de defesa cibernética e <span class="highlight-bold">investigação forense</span>. 
+  Tenho foco em garantir a <span class="highlight-bold">resiliência de ambientes computacionais</span> através de metodologias de <span class="highlight-bold">Hardening</span> e monitoramento ativo, aplicando políticas de segurança que garantem a tríade <span class="highlight-bold">CID</span> (Confidencialidade, Integridade e Disponibilidade).
+
+# ==========================================================================
+# SEÇÃO: CAT /ETC/GOALS (Objetivos)
+# --------------------------------------------------------------------------
+objetivos_texto: >
+  Meu objetivo é me consolidar como especialista em Segurança da Informação, com foco em ambientes 
+  <span class="highlight-bold">Linux</span>, infraestrutura corporativa e resposta a incidentes. 
+  Tenho grande interesse em atuar com segurança ofensiva, automação com <span class="highlight-bold">Python</span>, 
+  hardening de servidores e análise forense digital. Busco constantemente aprimorar minhas habilidades 
+  em detecção e mitigação de ameaças, análise de vulnerabilidades e implementação de políticas de segurança.
+
+# ==========================================================================
+# SEÇÃO: EXPERIÊNCIA (history | grep "work")
+# --------------------------------------------------------------------------
+experiencias:
+  - cargo: "Administrador de Redes e Servidores"
+    empresa: "TOPLAB (CONTRATO)"
+    periodo: "MAR 2024 — ATUAL"
+    atividades:
+      - "Gerenciamento de infraestrutura de rede e administração de ambientes <span class='highlight-bold'>Windows Server</span>;"
+      - "Administração de <span class='highlight-bold'>Active Directory (AD)</span> e implementação de <span class='highlight-bold'>GPOs de Segurança</span> para Hardening de estações;"
+      - "Configuração e manutenção de serviços críticos (<span class='highlight-bold'>DNS, DHCP, File Server</span> e Print Server);"
+      - "Monitoramento contínuo via <span class='highlight-bold'>Zabbix</span> para garantir alta disponibilidade e métricas de saúde dos ativos;"
+      - "Implementação de <span class='highlight-bold'>rotinas de backup</span> e políticas rigorosas de controle de acesso aos dados."
+
+  - cargo: "SysAdmin & Suporte Especializado"
+    empresa: "PAPELART (CONTRATO)"
+    periodo: "JUN 2021 — ATUAL"
+    atividades:
+      - "Suporte especializado de <span class='highlight-bold'>Nível 2 e 3</span>, garantindo a continuidade operacional de sistemas críticos;"
+      - "Administração de servidores e investigação de incidentes via análise de <span class='highlight-bold'>logs de eventos</span>;"
+      - "Gerenciamento de ativos e servidores através de acessos remotos seguros (<span class='highlight-bold'>SSH, RDP, VPN</span>);"
+      - "Gestão de patches de segurança e monitoramento proativo de <span class='highlight-bold'>Segurança de Endpoints</span>;"
+      - "Análise de tráfego de rede para identificação de gargalos ou anomalias de segurança."
+
+  - cargo: "Auxiliar de CPD | TI"
+    empresa: "MIX MATEUS"
+    periodo: "MAI 2023 — JUN 2024"
+    atividades:
+      - "Monitoramento da infraestrutura de TI em ambiente de <span class='highlight-bold'>varejo de larga escala</span>;"
+      - "Manutenção preventiva e suporte à conectividade de <span class='highlight-bold'>PDV (Pontos de Venda)</span> e equipamentos críticos;"
+      - "Gestão de fluxo de dados e integridade de arquivos via sistemas <span class='highlight-bold'>ERP e Bancos de Dados</span>;"
+      - "Apoio técnico para assegurar a <span class='highlight-bold'>baixa latência</span> e disponibilidade das operações de loja."
+
+  - cargo: "Webmaster & Gestor de Infraestrutura Web"
+    empresa: "Web Management"
+    periodo: "PROJETOS / FREELANCE"
+    atividades:
+      - "Gerenciamento de ecossistema <span class='highlight-bold'>WordPress</span> (Instalação, Temas e Plugins);"
+      - "Configuração de <span class='highlight-bold'>DNS</span>, gestão de domínios e implementação de certificados <span class='highlight-bold'>SSL/TLS</span>;"
+      - "Otimização de performance via <span class='highlight-bold'>CDN Cloudflare</span> e monitoramento de uptime;"
+      - "Migração de ambientes web e administração de bancos de dados <span class='highlight-bold'>MySQL</span>."
+
+# ==========================================================================
+# SEÇÃO: PROJETOS (ls ~/projects)
+# --------------------------------------------------------------------------
+projetos:
+  - nome: "./SiGI"
+    github: "https://github.com/soarespaullo/SiGI"
+    descricao: "Gestão administrativa para igrejas com foco em <span class='highlight-bold'>controle de membros</span>, patrimônio e fluxo operacional."
+
+  - nome: "./CryptoTools"
+    github: "https://github.com/soarespaullo/CryptoTools"
+    descricao: "Scripts para <span class='highlight-bold'>criptografia</span> e proteção de dados sensíveis."
+
+  - nome: "./YT-Tools"
+    github: "https://github.com/soarespaullo/YT-Tools"
+    descricao: "Ferramenta de automação para <span class='highlight-bold'>gestão e extração de mídia</span> de plataformas de vídeo."
+
+  - nome: "./PDFTools"
+    github: "https://github.com/soarespaullo/PDFTools"
+    descricao: "Automação em <span class='highlight-bold'>Python</span> para manipulação e processamento de documentos <span class='highlight-bold'>PDF</span>."
+
+  - nome: "./InOutControl"
+    github: "https://github.com/soarespaullo/InOutControl"
+    descricao: "Controle operacional de fluxo de entrada e saída com <span class='highlight-bold'>lógica de processos</span>."
+
+  - nome: "./www"
+    github: "https://github.com/soarespaullo/www"
+    descricao: "Script de <span class='highlight-bold'>backup automatizado</span> para recuperação de desastres (MySQL + /var/www) com foco em continuidade operacional."
+
+# ==========================================================================
+# SEÇÃO: EDUCAÇÃO (cat /etc/education)
+# --------------------------------------------------------------------------
+formacao:
+  - curso: "Pós: Forense Computacional e Perícia Digital"
+    ano: "2025"
+    instituicao: "UNOPAR - Universidade Norte do Paraná"
+  - curso: "Pós: Defesa Cibernética"
+    ano: "2025"
+    instituicao: "UNOPAR - Universidade Norte do Paraná"
+  - curso: "Graduação: Segurança da Informação"
+    ano: "2024"
+    instituicao: "UNOPAR - Universidade Norte do Paraná"
+
+# ==========================================================================
+# SEÇÃO: SKILLS (ls -la /bin/skills)
+# --------------------------------------------------------------------------
+skills:
+  - nome: "Infrastructure"
+    icone: "fa-server"
+    desc: "Windows Server, Active Directory, GPO, Linux Hardening, DNS/DHCP."
+  - nome: "Virtualization"
+    icone: "fa-microchip"
+    desc: "KVM/QEMU, VMware, VirtualBox, Proxmox."
+  - nome: "Networking"
+    icone: "fa-network-wired"
+    desc: "Mikrotik, Firewalls, VPN (SSH/RDP), Troubleshooting."
+  - nome: "CyberSecurity"
+    icone: "fa-user-shield"
+    desc: "Pentesting, Análise Forense, Defesa DDoS."
+  - nome: "Web & Data"
+    icone: "fa-code"
+    desc: "WordPress, MySQL, SSL/TLS, Cloudflare CDN."
+  - nome: "Automation"
+    icone: "fa-terminal"
+    desc: "Shell Script, Python, Zabbix Monitoring."
+
+# ==========================================================================
+# SEÇÃO: CERTIFICAÇÕES (grep "CERT")
+# --------------------------------------------------------------------------
+certificacoes_visiveis:
+  - nome: "Pentest Profissional"
+    instrutor: "Desec Security / Ricardo Longatto"
+  - nome: "Hacking e Pentest"
+    instrutor: "Solyd Offensive Security"
+  - nome: "Wi-Fi Hacking Enterprise"
+    instrutor: "Desec Security / Mateus Buogo"
+  - nome: "Pentest Mobile"
+    instrutor: "Desec Security / Ricardo Longatto"
+  - nome: "Treinamento MikroTik"
+    instrutor: "Redes Brasil / Francisco Neto"
+  - nome: "Pro. em Shell Script"
+    instrutor: "SlackJeff / Jefferson Carneiro"
+  - nome: "Curso de Firewall"
+    instrutor: "Redes Brasil / Francisco Neto"
+  - nome: "Zabbix do Zero"
+    instrutor: "Redes Brasil / Thales Moisés"
+
+certificacoes_ocultas:
+  - nome: "Metasploit Framework"
+    instrutor: "Hackers Hive / Daniel Donda"
+  
+  - nome: "Formação em Cibersegurança"
+    instrutor: "Hackers do Bem"
+  
+  - nome: "Samba 4 Active Directory"
+    instrutor: "Udemy"
+  
+  - nome: "FortiGate do Zero"
+    instrutor: "Redes Brasil / Lucas Roberto"
+  
+  - nome: "DevOps"
+    instrutor: "4-Linux / Rodolfo Gobbi"
+
+  - nome: "Hacking para iniciantes"
+    instrutor: "CrowSec / Carlos Eduardo"
+
+  - nome: "Containers Fundamentals"
+    instrutor: "4-Linux / Rodolfo Gobbi"
+  
+  - nome: "Introdução ao Git e ao GitHub"
+    instrutor: "Digial Innovation One"  
+
+  - nome: "Introdução a Segurança da Informação"
+    instrutor: "eSecurity / Alan Sanches"
+ 
+  - nome: "Huawei do Zero"
+    instrutor: "Redes Brasil / Thales Moisés"
+
+  - nome: "Kali Linux for Beginners"
+    instrutor: "eSecurity / Alan Sanches"
+
+  - nome: "Datacom do Zero"
+    instrutor: "Redes Brasil / Thales Moisés"
+
+  - nome: "Arquitetura de Redes"
+    instrutor: "Udemy  / Gabriel Torres"
+  
+  - nome: "Linux do Zero"
+    instrutor: "Redes Brasil / Thales Moisés"
+
+  - nome: "DoS e DDoS /c Kali Linux"
+    instrutor: "Udemy / Clécius Wilton"
+
+  - nome: "Proxximox do Zero"
+    instrutor: "Redes Brasil / Thales Moisés"
+
+  - nome: "Formação Hacker"
+    instrutor: "Udemy / Prof. Hugo"
+
+  - nome: "Autocoaching"
+    instrutor: "Unopar"
+
+  - nome: "Introdução à linguagem Python"
+    instrutor: "Unopar / Simone Wojcicki"
+
+  

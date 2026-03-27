@@ -1,298 +1,123 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+---
+layout: default
+---
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta name="description" content="Portfólio de Paulo Soares - Especialista em Infraestrutura, SysAdmin e pós-graduando em Defesa Cibernética.">
-    <meta name="author" content="Paulo Soares">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://soarespaullo.github.io/">
-    <meta property="og:title" content="Paulo Soares | SysAdmin & Infraestrutura">
-    <meta property="og:description" content="Administração de Sistemas, Infraestrutura e Redes. Pós-graduado em Defesa Cibernética e Forense Digital.">
-    <meta property="og:image" content="https://soarespaullo.github.io/assets/img/og-image.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://soarespaullo.github.io/">
-    <meta property="twitter:title" content="Paulo Soares | SysAdmin & Infraestrutura">
-    <meta property="twitter:description" content="Administração de Sistemas, Infraestrutura e Redes. Pós-graduado em Defesa Cibernética e Forense Digital.">
-    <meta property="twitter:image" content="https://soarespaullo.github.io/assets/img/og-image.jpg">
-
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="apple-touch-icon" href="assets/img/favicon.png">
-    
-    <title>Paulo Soares</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <div class="container">
-        <header>
-            <div class="profile-container">
-                <div class="profile-flip">
-                    <div class="profile-inner">
-                        <img src="assets/img/profile.jpg" alt="Paulo Soares" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Paulo+Soares&background=161616&color=00ff41'">
-                        
-                        <div class="profile-back">
-                            <i class="fas fa-question"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="header-text">
-                    <h1>Paulo_Soares<span class="cursor"></span></h1>
-                    <p id="typing" class="mono" style="font-size: 0.9rem; margin-top: 5px; min-height: 1.5em;"></p>
-
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/soarespaullo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/@soarespaullo" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://github.com/soarespaullo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <a href="mailto:soarespaullo@proton.me"><i class="fas fa-envelope"></i></a>
-                        <a href="https://t.me/soarespaullo" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="https://soarespaullo.github.io/blog/" target="_blank" rel="noopener noreferrer"><i class="fas fa-terminal"></i></a>
-                        <a href="assets/pdf/Paulo.Soares.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section id="sobre">
-            <h2 title="Comando usado para identificar o usuário logado no sistema">whoami</h2>
-            <p>
-            Sou graduado em Segurança da Informação e pós-graduado em <span class="highlight-bold">Defesa Cibernética</span> e <span class="highlight-bold">Perícia Forense Computacional</span>. Com mais de <span class="highlight-bold">cinco anos de experiência</span> na administração de sistemas, atuo diretamente na configuração e manutenção de redes, servidores e infraestrutura de TI. Minhas competências unem o suporte técnico avançado à implementação de práticas de defesa cibernética e <span class="highlight-bold">investigação forense</span>. Tenho foco em garantir a <span class="highlight-bold">resiliência de ambientes computacionais</span> através de metodologias de <span class="highlight-bold">Hardening</span> e monitoramento ativo, aplicando políticas de segurança que garantem a tríade <span class="highlight-bold">CID</span> (Confidencialidade, Integridade e Disponibilidade).
-            </p>
-        </section>
-
-        <section id="objetivos">
-            <h2 title="Exibe o conteúdo do arquivo de metas e objetivos profissionais">cat /etc/goals</h2>
-            <p>Meu objetivo é me consolidar como especialista em Segurança da Informação, com foco em ambientes <span class="highlight-bold">Linux</span>, infraestrutura corporativa e resposta a incidentes. Tenho grande interesse em atuar com segurança ofensiva, automação com <span class="highlight-bold">Python</span>, hardening de servidores e análise forense digital. Busco constantemente aprimorar minhas habilidades em detecção e mitigação de ameaças, análise de vulnerabilidades e implementação de políticas de segurança.</p>
-        </section>
-
-        <section id="experiencia">
-            <h2 title="Lista o histórico de comandos executados filtrando por experiências de trabalho">history | grep "work"</h2>
-
-            <div class="item">
-                <div class="item-header">
-                    <h3>Administrador de Redes e Servidores</h3>
-                    <span class="date">MAR 2024 — ATUAL</span>
-                </div>
-                <span class="category-badge">TOPLAB (CONTRATO)</span>
-                <ul>
-                    <li>Gerenciamento de infraestrutura de rede e administração de ambientes <span class="highlight-bold">Windows Server</span>;</li>
-                    <li>Administração de <span class="highlight-bold">Active Directory (AD)</span> e implementação de <span class="highlight-bold">GPOs de Segurança</span> para Hardening de estações;</li>
-                    <li>Configuração e manutenção de serviços críticos (<span class="highlight-bold">DNS, DHCP, File Server</span> e Print Server);</li>
-                    <li>Monitoramento contínuo via <span class="highlight-bold">Zabbix</span> para garantir alta disponibilidade e métricas de saúde dos ativos;</li>
-                    <li>Implementação de <span class="highlight-bold">rotinas de backup</span> e políticas rigorosas de controle de acesso aos dados.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <h3>SysAdmin & Suporte Especializado</h3>
-                    <span class="date">JUN 2021 — ATUAL</span>
-                </div>
-                <span class="category-badge">PAPELART (CONTRATO)</span>
-                <ul>
-                    <li>Suporte especializado de <span class="highlight-bold">Nível 2 e 3</span>, garantindo a continuidade operacional de sistemas críticos;</li>
-                    <li>Administração de servidores e investigação de incidentes via análise de <span class="highlight-bold">logs de eventos</span>;</li>
-                    <li>Gerenciamento de ativos e servidores através de acessos remotos seguros (<span class="highlight-bold">SSH, RDP, VPN</span>);</li>
-                    <li>Gestão de patches de segurança e monitoramento proativo de <span class="highlight-bold">Segurança de Endpoints</span>;</li>
-                    <li>Análise de tráfego de rede para identificação de gargalos ou anomalias de segurança.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <h3>Auxiliar de CPD | TI</h3>
-                    <span class="date">MAI 2023 — JUN 2024</span>
-                </div>
-                <span class="category-badge">MIX MATEUS</span>
-                <ul>
-                    <li>Monitoramento da infraestrutura de TI em ambiente de <span class="highlight-bold">varejo de larga escala</span>;</li>
-                    <li>Manutenção preventiva e suporte à conectividade de <span class="highlight-bold">PDV (Pontos de Venda)</span> e equipamentos críticos;</li>
-                    <li>Gestão de fluxo de dados e integridade de arquivos via sistemas <span class="highlight-bold">ERP e Bancos de Dados</span>;</li>
-                    <li>Apoio técnico para assegurar a <span class="highlight-bold">baixa latência</span> e disponibilidade das operações de loja.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <h3>Webmaster & Gestor de Infraestrutura Web</h3>
-                    <span class="date">PROJETOS / FREELANCE</span>
-                </div>
-                <span class="category-badge">Web Management</span>
-                <ul>
-                    <li>Gerenciamento de ecossistema <span class="highlight-bold">WordPress</span> (Instalação, Temas e Plugins);</li>
-                    <li>Configuração de <span class="highlight-bold">DNS</span>, gestão de domínios e implementação de certificados <span class="highlight-bold">SSL/TLS</span>;</li>
-                    <li>Otimização de performance via <span class="highlight-bold">CDN Cloudflare</span> e monitoramento de uptime;</li>
-                    <li>Migração de ambientes web e administração de bancos de dados <span class="highlight-bold">MySQL</span>.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projetos">
-            <h2 title="Lista o diretório de projetos pessoais e automações desenvolvidas">ls ~/projects</h2>
-            <div class="projects-grid">
+<header>
+    <div class="profile-container">
+        <div class="profile-flip">
+            <div class="profile-inner">
+                <img src="{{ site.avatar | relative_url }}" alt="{{ site.nome }}" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name={{ site.nome | url_encode }}&background=161616&color=00ff41'">
                 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="mono">./SiGI</h3>
-                        <a href="https://github.com/soarespaullo/SiGI" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-		    <p>Gestão administrativa para igrejas com foco em <span class="highlight-bold">controle de membros</span>, patrimônio e fluxo operacional.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="mono">./CryptoTools</h3>
-                        <a href="https://github.com/soarespaullo/CryptoTools" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <p>Scripts para <span class="highlight-bold">criptografia</span> e proteção de dados sensíveis.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="mono">./YT-Tools</h3>
-                        <a href="https://github.com/soarespaullo/YT-Tools" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <p>Ferramenta de automação para <span class="highlight-bold">gestão e extração de mídia</span> de plataformas de vídeo.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="mono">./PDFTools</h3>
-                        <a href="https://github.com/soarespaullo/PDFTools" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <p>Automação em <span class="highlight-bold">Python</span> para manipulação e processamento de documentos <span class="highlight-bold">PDF</span>.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="mono">./InOutControl</h3>
-                        <a href="https://github.com/soarespaullo/InOutControl" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <p>Controle operacional de fluxo de entrada e saída com <span class="highlight-bold">lógica de processos</span>.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="mono">./www</h3>
-                        <a href="https://github.com/soarespaullo/www" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <p>Script de <span class="highlight-bold">backup automatizado</span> para recuperação de desastres (MySQL + /var/www) com foco em continuidade operacional.</p>
+                <div class="profile-back">
+                    <i class="fas fa-question"></i>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="formacao">
-            <h2 title="Exibe o arquivo de configuração do sistema que contém os dados educacionais">cat /etc/education</h2>
-            <div class="item">
-                <div class="item-header">
-                    <h3>Pós: Forense Computacional e Perícia Digital</h3>
-                    <span class="date">2025</span>
-                </div>
-                <span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
+        <div class="header-text">
+            <h1>{{ site.username }}<span class="cursor"></span></h1>
+            <p id="typing" class="mono" style="font-size: 0.9rem; margin-top: 5px; min-height: 1.5em;"></p>
 
-                <div class="item-header">
-                    <h3>Pós: Defesa Cibernética</h3>
-                    <span class="date">2025</span>
-                </div>
-                <span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
-
-                <div class="item-header">
-                    <h3>Graduação: Segurança da Informação</h3>
-                    <span class="date">2024</span>
-                </div>
-                <span class="edu-inst"><span class="highlight-bold">Instituição:</span> UNOPAR - Universidade Norte do Paraná</span>
+            <div class="social-links">
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i></a>
+                <a href="{{ site.social.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="{{ site.social.blog }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-terminal"></i></a>
+                <a href="{{ site.social.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
             </div>
-        </section>
-
-        <section id="skills">
-            <h2 title="Lista os binários (ferramentas e habilidades) disponíveis no sistema">ls -la /bin/skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-server"></i></div>
-                    <div class="skill-info">
-                        <span class="skill-name">Infrastructure</span>
-                        <span class="skill-desc">Windows Server, Active Directory, GPO, Linux Hardening, DNS/DHCP.</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="skill-info">
-                        <span class="skill-name">Virtualization</span>
-                        <span class="skill-desc">KVM/QEMU, VMware, VirtualBox, Proxmox.</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                    <div class="skill-info">
-                        <span class="skill-name">Networking</span>
-                        <span class="skill-desc">Mikrotik, Firewalls, VPN (SSH/RDP), Troubleshooting.</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-user-shield"></i></div>
-                    <div class="skill-info">
-                        <span class="skill-name">CyberSecurity</span>
-                        <span class="skill-desc">Pentesting, Análise Forense, Defesa DDoS.</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <div class="skill-info">
-                        <span class="skill-name">Web & Data</span>
-                        <span class="skill-desc">WordPress, MySQL, SSL/TLS, Cloudflare CDN.</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
-                    <div class="skill-info">
-                        <span class="skill-name">Automation</span>
-                        <span class="skill-desc">Shell Script, Python, Zabbix Monitoring.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="certificacoes">
-            <h2 title="Busca por registros de certificados dentro do log de conquistas">grep "CERT" achievements.log</h2>
-            <ul>
-                <li>Pentest Profissional — <span class="mono">Desec Security / Ricardo Longatto</span></li>
-                <li>Hacking e Pentest — <span class="mono">Solyd Offensive Security</span></li>
-                <li>Wi-Fi Hacking Enterprise — <span class="mono">Desec Security / Mateus Buogo</span></li>
-                <li>Pentest Mobile — <span class="mono">Desec Security / Ricardo Longatto</span></li>
-                <li>Treinamento MikroTik — <span class="mono">Redes Brasil / Francisco Neto</span></li>
-                <li>Pro. em Shell Script — <span class="mono">SlackJeff / Jefferson Carneiro</span></li>
-                <li>Curso de Firewall — <span class="mono">Redes Brasil / Francisco Neto</span></li>
-                <li>Curso Zabbix do Zero — <span class="mono">Redes Brasil / Thales Moisés</span></li>
-            </ul>
-
-            <div id="more-certs" class="extra-certs">
-                <ul>
-                    <li>Metasploit Framework — <span class="mono">Hackers Hive / Daniel Donda</span></li>
-                    <li>Formação em Cibersegurança — <span class="mono">Hackers do Bem</span></li>
-                    <li>Samba 4 Active Directory — <span class="mono">Udemy</span></li>
-                    <li>FortiGate do Zero — <span class="mono">Redes Brasil / Lucas Roberto</span></li>
-                </ul>
-            </div>
-            <button class="btn-more" id="toggle-btn" onclick="toggleCerts()">[ tail -f achievements.log ]</button>
-        </section>
-
-        <footer>
-            <p class="mono">system.exit(0);</p>
-            <p>&copy; 2026 Paulo Soares. Integridade e Confidencialidade.</p>
-        </footer>
+        </div>
     </div>
+</header>
 
-    <script src="js/script.js"></script>
+<section id="sobre">
+    <h2 title="Comando usado para identificar o usuário logado no sistema">whoami</h2>
+    <p>{{ site.sobre_texto | markdownify }}</p>
+</section>
 
-</body>
+<section id="objetivos">
+    <h2 title="Exibe o conteúdo do arquivo de metas e objetivos profissionais">cat /etc/goals</h2>
+    <p>{{ site.objetivos_texto | markdownify }}</p>
+</section>
 
-</html>
+<section id="experiencia">
+    <h2 title="Lista o histórico de comandos executados filtrando por experiências de trabalho">history | grep "work"</h2>
+
+    {% for exp in site.experiencias %}
+    <div class="item">
+        <div class="item-header">
+            <h3>{{ exp.cargo }}</h3>
+            <span class="date">{{ exp.periodo }}</span>
+        </div>
+        <span class="category-badge">{{ exp.empresa }}</span>
+        <ul>
+            {% for item in exp.atividades %}
+            <li>{{ item | markdownify }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</section>
+
+<section id="projetos">
+    <h2 title="Lista o diretório de projetos pessoais e automações desenvolvidas">ls ~/projects</h2>
+    <div class="projects-grid">
+        {% for projeto in site.projetos %}
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="mono">{{ projeto.nome }}</h3>
+                <a href="{{ projeto.github }}" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>{{ projeto.descricao | markdownify }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="formacao">
+    <h2 title="Exibe o arquivo de configuração do sistema que contém os dados educacionais">cat /etc/education</h2>
+    <div class="item">
+        {% for edu in site.formacao %}
+        <div class="item-header">
+            <h3>{{ edu.curso }}</h3>
+            <span class="date">{{ edu.ano }}</span>
+        </div>
+        <span class="edu-inst"><span class="highlight-bold">Instituição:</span> {{ edu.instituicao }}</span>
+        <div style="margin-bottom: 15px;"></div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="skills">
+    <h2 title="Lista os binários (ferramentas e habilidades) disponíveis no sistema">ls -la /bin/skills</h2>
+    <div class="skills-grid">
+        {% for skill in site.skills %}
+        <div class="skill-card">
+            <div class="skill-icon"><i class="fas {{ skill.icone }}"></i></div>
+            <div class="skill-info">
+                <span class="skill-name">{{ skill.nome }}</span>
+                <span class="skill-desc">{{ skill.desc }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="certificacoes">
+    <h2 title="Busca por registros de certificados dentro do log de conquistas">grep "CERT" achievements.log</h2>
+    <ul>
+        {% for cert in site.certificacoes_visiveis %}
+        <li>{{ cert.nome }} — <span class="mono">{{ cert.instrutor }}</span></li>
+        {% endfor %}
+    </ul>
+
+    <div id="more-certs" class="extra-certs">
+        <ul>
+            {% for cert in site.certificacoes_ocultas %}
+            <li>{{ cert.nome }} — <span class="mono">{{ cert.instrutor }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <button class="btn-more" id="toggle-btn" onclick="toggleCerts()">[ tail -f achievements.log ]</button>
+</section>

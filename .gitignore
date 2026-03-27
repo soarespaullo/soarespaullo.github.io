@@ -1,0 +1,23 @@
+# Jekyll - Pasta onde o site é gerado (NUNCA suba esta pasta)
+_site/
+
+# Metadados do Jekyll e cache
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependências do Ruby (Gemfile.lock pode ser subido, mas as pastas de vendor não)
+.bundle/
+vendor/
+pkg/
+spec/reports/
+
+# Arquivos de sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
